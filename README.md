@@ -1,6 +1,6 @@
 # Learn Databricks SQL
 
-The code of the blog series **Learn Databricks SQL** on [stefanko.ch](https://www.stefanko.ch).
+The code of the blog series **Learn Databricks SQL** on [Medium](https://medium.com/@stefanko-ch).
 
 Every part of the series takes one piece of Databricks SQL and runs it, with its variations, on the same small
 tables. This repository has the SQL of every part, and next to every `.sql` file what a Databricks SQL warehouse
@@ -41,7 +41,7 @@ Part 1 of the series shows every table and its odd rows.
 
 | Part | Article | Code |
 |---|---|---|
-| 1 | [Why, and the data we'll use](https://www.stefanko.ch/p/databricks-sql-01-intro/) | [`parts/01_intro/`](parts/01_intro/) |
+| 1 | [Why, and the data we'll use](https://medium.com/@stefanko-ch/learn-databricks-sql-part-1-why-and-the-data-well-use-a0c5480da50c) | [`parts/01_intro/`](parts/01_intro/) |
 
 ## Exercises
 
