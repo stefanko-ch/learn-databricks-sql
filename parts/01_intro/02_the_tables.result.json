@@ -1,0 +1,930 @@
+{
+ "file": "02_the_tables.sql",
+ "ran_on": "2026-11-11",
+ "statements": [
+  {
+   "sql": "SELECT *\nFROM stations\nORDER BY station_id",
+   "columns": [
+    {
+     "name": "station_id",
+     "type": "int"
+    },
+    {
+     "name": "name",
+     "type": "string"
+    },
+    {
+     "name": "postal_code",
+     "type": "int"
+    },
+    {
+     "name": "latitude",
+     "type": "double"
+    },
+    {
+     "name": "longitude",
+     "type": "double"
+    },
+    {
+     "name": "capacity",
+     "type": "int"
+    },
+    {
+     "name": "opened_on",
+     "type": "date"
+    }
+   ],
+   "rows": [
+    [
+     1,
+     "Bahnhof",
+     6003,
+     47.0502,
+     8.3102,
+     24,
+     "2022-05-01"
+    ],
+    [
+     2,
+     "Schwanenplatz",
+     6004,
+     47.0533,
+     8.3089,
+     16,
+     "2022-05-01"
+    ],
+    [
+     3,
+     "Verkehrshaus",
+     6006,
+     47.0539,
+     8.3373,
+     20,
+     "2023-04-01"
+    ],
+    [
+     4,
+     "Allmend",
+     6005,
+     47.0351,
+     8.3032,
+     12,
+     "2023-04-01"
+    ],
+    [
+     5,
+     "Kantonsspital",
+     6004,
+     47.0578,
+     8.298,
+     10,
+     "2024-06-15"
+    ],
+    [
+     6,
+     "Littau",
+     6014,
+     47.0531,
+     8.2571,
+     null,
+     "2026-04-15"
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT *\nFROM bikes\nORDER BY bike_id",
+   "columns": [
+    {
+     "name": "bike_id",
+     "type": "int"
+    },
+    {
+     "name": "model",
+     "type": "string"
+    },
+    {
+     "name": "bike_type",
+     "type": "string"
+    },
+    {
+     "name": "purchased_on",
+     "type": "date"
+    },
+    {
+     "name": "purchase_price",
+     "type": "decimal"
+    },
+    {
+     "name": "home_station_id",
+     "type": "int"
+    },
+    {
+     "name": "status",
+     "type": "string"
+    }
+   ],
+   "rows": [
+    [
+     1,
+     "Tour 3",
+     "city",
+     "2023-04-12",
+     "890.00",
+     1,
+     "active"
+    ],
+    [
+     2,
+     "Tour 3",
+     "city",
+     "2023-04-12",
+     "890.00",
+     2,
+     "active"
+    ],
+    [
+     3,
+     "Tour 3",
+     "city",
+     "2024-03-01",
+     "940.00",
+     1,
+     "active"
+    ],
+    [
+     4,
+     "Urban S",
+     "city",
+     "2024-03-01",
+     "1120.00",
+     4,
+     "active"
+    ],
+    [
+     5,
+     "Urban S",
+     "city",
+     "2025-02-17",
+     "1150.00",
+     2,
+     "active"
+    ],
+    [
+     6,
+     "Volt E1",
+     "e-bike",
+     "2024-05-20",
+     "3400.00",
+     3,
+     "active"
+    ],
+    [
+     7,
+     "Volt E1",
+     "e-bike",
+     "2022-06-03",
+     "3250.00",
+     1,
+     "retired"
+    ],
+    [
+     8,
+     "Volt E2",
+     "e-bike",
+     "2025-02-17",
+     "3890.00",
+     3,
+     "active"
+    ],
+    [
+     9,
+     "Volt E2",
+     "e-bike",
+     "2025-02-17",
+     "3890.00",
+     5,
+     "active"
+    ],
+    [
+     10,
+     "Cargo L",
+     "cargo",
+     "2024-09-09",
+     "5600.00",
+     4,
+     "active"
+    ],
+    [
+     11,
+     "Cargo L",
+     "cargo",
+     "2024-09-09",
+     "5600.00",
+     null,
+     "maintenance"
+    ],
+    [
+     12,
+     "Volt E2",
+     "e-bike",
+     "2026-03-30",
+     "3990.00",
+     3,
+     "active"
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT *\nFROM customers\nORDER BY customer_id",
+   "columns": [
+    {
+     "name": "customer_id",
+     "type": "int"
+    },
+    {
+     "name": "first_name",
+     "type": "string"
+    },
+    {
+     "name": "last_name",
+     "type": "string"
+    },
+    {
+     "name": "email",
+     "type": "string"
+    },
+    {
+     "name": "city",
+     "type": "string"
+    },
+    {
+     "name": "signed_up_on",
+     "type": "date"
+    },
+    {
+     "name": "plan",
+     "type": "string"
+    }
+   ],
+   "rows": [
+    [
+     1,
+     "Luca",
+     "Keller",
+     "luca.keller@example.com",
+     "Luzern",
+     "2024-05-02",
+     "plus"
+    ],
+    [
+     2,
+     "Mia",
+     "Schmid",
+     "mia.schmid@example.com",
+     "Luzern",
+     "2024-08-19",
+     "plus"
+    ],
+    [
+     3,
+     "Noah",
+     "Weber",
+     "noah.weber@example.com",
+     "Kriens",
+     "2025-01-11",
+     "basic"
+    ],
+    [
+     4,
+     "Anna",
+     "Meier",
+     "anna.meier@example.com",
+     "luzern",
+     "2025-03-07",
+     "basic"
+    ],
+    [
+     5,
+     "Elena",
+     "Fischer",
+     null,
+     "Luzern",
+     "2025-06-23",
+     "basic"
+    ],
+    [
+     6,
+     "Jonas",
+     "Müller",
+     "jonas.mueller@example.com",
+     "LUZERN",
+     "2025-09-01",
+     "plus"
+    ],
+    [
+     7,
+     "Sofia",
+     "Brunner",
+     "sofia.brunner@example.com",
+     "Emmen",
+     "2025-11-15",
+     null
+    ],
+    [
+     8,
+     null,
+     "Stadtkurier GmbH",
+     "dispo@stadtkurier.example",
+     "Luzern",
+     "2024-02-01",
+     "business"
+    ],
+    [
+     9,
+     "ANNA",
+     "MEIER",
+     " Anna.Meier@Example.com ",
+     "Luzern",
+     "2026-01-20",
+     "plus"
+    ],
+    [
+     10,
+     "Tim",
+     "Baumann",
+     "tim.baumann@example.com",
+     "Küssnacht",
+     "2026-03-15",
+     "basic"
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT *\nFROM price_changes\nORDER BY valid_from, bike_type",
+   "columns": [
+    {
+     "name": "bike_type",
+     "type": "string"
+    },
+    {
+     "name": "valid_from",
+     "type": "date"
+    },
+    {
+     "name": "unlock_fee",
+     "type": "decimal"
+    },
+    {
+     "name": "price_per_30_min",
+     "type": "decimal"
+    }
+   ],
+   "rows": [
+    [
+     "cargo",
+     "2026-01-01",
+     "2.00",
+     "4.00"
+    ],
+    [
+     "city",
+     "2026-01-01",
+     "1.00",
+     "1.50"
+    ],
+    [
+     "e-bike",
+     "2026-01-01",
+     "1.50",
+     "3.00"
+    ],
+    [
+     "cargo",
+     "2026-03-28",
+     "2.00",
+     "4.50"
+    ],
+    [
+     "city",
+     "2026-03-28",
+     "1.00",
+     "2.00"
+    ],
+    [
+     "e-bike",
+     "2026-03-28",
+     "2.00",
+     "3.50"
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT *\nFROM rentals\nORDER BY rental_id",
+   "columns": [
+    {
+     "name": "rental_id",
+     "type": "int"
+    },
+    {
+     "name": "bike_id",
+     "type": "int"
+    },
+    {
+     "name": "customer_id",
+     "type": "int"
+    },
+    {
+     "name": "start_station_id",
+     "type": "int"
+    },
+    {
+     "name": "end_station_id",
+     "type": "int"
+    },
+    {
+     "name": "started_at",
+     "type": "timestamp"
+    },
+    {
+     "name": "ended_at",
+     "type": "timestamp"
+    },
+    {
+     "name": "distance_km",
+     "type": "decimal"
+    },
+    {
+     "name": "price_chf",
+     "type": "decimal"
+    },
+    {
+     "name": "payment_method",
+     "type": "string"
+    }
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     1,
+     1,
+     2,
+     "2026-03-23 06:42:00",
+     "2026-03-23 07:00:00",
+     "3.2",
+     "2.50",
+     "card"
+    ],
+    [
+     2,
+     6,
+     2,
+     3,
+     1,
+     "2026-03-23 07:05:00",
+     "2026-03-23 07:29:00",
+     "6.1",
+     "4.50",
+     "twint"
+    ],
+    [
+     3,
+     2,
+     3,
+     2,
+     5,
+     "2026-03-23 11:30:00",
+     "2026-03-23 12:11:00",
+     "5.4",
+     "4.00",
+     "card"
+    ],
+    [
+     4,
+     10,
+     5,
+     4,
+     4,
+     "2026-03-23 13:15:00",
+     "2026-03-23 14:50:00",
+     "7.8",
+     "18.00",
+     "twint"
+    ],
+    [
+     5,
+     7,
+     4,
+     1,
+     3,
+     "2026-03-24 06:50:00",
+     "2026-03-24 07:17:00",
+     "6.4",
+     "4.50",
+     "card"
+    ],
+    [
+     6,
+     3,
+     1,
+     1,
+     2,
+     "2026-03-24 06:44:00",
+     "2026-03-24 07:00:00",
+     "3.1",
+     "2.50",
+     "card"
+    ],
+    [
+     7,
+     8,
+     6,
+     5,
+     1,
+     "2026-03-24 16:20:00",
+     "2026-03-24 16:42:00",
+     "4.0",
+     "4.50",
+     "twint"
+    ],
+    [
+     8,
+     1,
+     7,
+     2,
+     2,
+     "2026-03-24 18:05:00",
+     "2026-03-24 19:08:00",
+     "9.5",
+     "5.50",
+     "card"
+    ],
+    [
+     9,
+     6,
+     2,
+     3,
+     1,
+     "2026-03-25 07:02:00",
+     "2026-03-25 07:27:00",
+     "6.0",
+     "4.50",
+     "twint"
+    ],
+    [
+     10,
+     4,
+     8,
+     4,
+     1,
+     "2026-03-25 07:30:00",
+     "2026-03-25 08:03:00",
+     "7.2",
+     "4.00",
+     "invoice"
+    ],
+    [
+     11,
+     11,
+     5,
+     4,
+     5,
+     "2026-03-25 09:10:00",
+     "2026-03-25 11:10:00",
+     "11.3",
+     "18.00",
+     "twint"
+    ],
+    [
+     12,
+     2,
+     9,
+     1,
+     3,
+     "2026-03-25 17:45:00",
+     "2026-03-25 18:14:00",
+     "6.6",
+     "2.50",
+     "card"
+    ],
+    [
+     13,
+     9,
+     3,
+     5,
+     2,
+     "2026-03-26 12:10:00",
+     "2026-03-26 12:24:00",
+     "2.2",
+     "4.50",
+     "card"
+    ],
+    [
+     14,
+     3,
+     1,
+     1,
+     2,
+     "2026-03-26 06:41:00",
+     "2026-03-26 06:58:00",
+     "3.2",
+     "2.50",
+     "card"
+    ],
+    [
+     15,
+     7,
+     6,
+     1,
+     5,
+     "2026-03-26 21:15:00",
+     "2026-03-26 21:34:00",
+     "3.5",
+     "4.50",
+     "twint"
+    ],
+    [
+     16,
+     5,
+     99,
+     2,
+     1,
+     "2026-03-26 14:00:00",
+     "2026-03-26 14:12:00",
+     "1.9",
+     "2.50",
+     "card"
+    ],
+    [
+     17,
+     8,
+     2,
+     3,
+     1,
+     "2026-03-27 07:04:00",
+     "2026-03-27 07:30:00",
+     "6.1",
+     "4.50",
+     "twint"
+    ],
+    [
+     18,
+     1,
+     4,
+     1,
+     4,
+     "2026-03-27 23:40:00",
+     "2026-03-28 00:25:00",
+     "8.0",
+     "4.00",
+     "card"
+    ],
+    [
+     19,
+     10,
+     7,
+     2,
+     3,
+     "2026-03-28 10:00:00",
+     "2026-03-28 12:30:00",
+     "14.2",
+     "24.50",
+     "card"
+    ],
+    [
+     20,
+     6,
+     8,
+     4,
+     1,
+     "2026-03-28 08:15:00",
+     "2026-03-28 08:46:00",
+     "7.0",
+     "9.00",
+     "invoice"
+    ],
+    [
+     21,
+     2,
+     1,
+     1,
+     2,
+     "2026-03-28 09:30:00",
+     "2026-03-28 09:45:00",
+     "3.0",
+     "0.00",
+     null
+    ],
+    [
+     22,
+     9,
+     3,
+     5,
+     5,
+     "2026-03-28 15:20:00",
+     "2026-03-28 16:48:00",
+     "12.4",
+     "12.50",
+     "card"
+    ],
+    [
+     23,
+     4,
+     6,
+     1,
+     5,
+     "2026-03-29 00:50:00",
+     "2026-03-29 01:20:00",
+     "4.1",
+     "3.00",
+     "twint"
+    ],
+    [
+     24,
+     3,
+     9,
+     3,
+     2,
+     "2026-03-29 13:05:00",
+     "2026-03-29 13:57:00",
+     "8.8",
+     "5.00",
+     "card"
+    ],
+    [
+     25,
+     8,
+     2,
+     3,
+     1,
+     "2026-03-30 06:03:00",
+     "2026-03-30 06:28:00",
+     "6.0",
+     "5.50",
+     "twint"
+    ],
+    [
+     26,
+     1,
+     1,
+     1,
+     2,
+     "2026-03-30 05:42:00",
+     "2026-03-30 05:59:00",
+     "3.1",
+     "3.00",
+     "card"
+    ],
+    [
+     27,
+     5,
+     5,
+     4,
+     4,
+     "2026-03-30 12:30:00",
+     "2026-03-30 12:50:00",
+     "2.7",
+     "3.00",
+     "twint"
+    ],
+    [
+     28,
+     6,
+     8,
+     4,
+     1,
+     "2026-03-31 06:15:00",
+     "2026-03-31 06:45:00",
+     "7.1",
+     "5.50",
+     "invoice"
+    ],
+    [
+     29,
+     9,
+     7,
+     2,
+     1,
+     "2026-03-31 16:40:00",
+     "2026-03-31 17:16:00",
+     "5.9",
+     "9.00",
+     "card"
+    ],
+    [
+     30,
+     2,
+     3,
+     5,
+     null,
+     "2026-03-31 17:55:00",
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT *\nFROM rentals_raw\nORDER BY raw:rental_id::int",
+   "columns": [
+    {
+     "name": "raw",
+     "type": "string"
+    }
+   ],
+   "rows": [
+    [
+     "{\"rental_id\":1,\"bike\":{\"id\":1,\"type\":\"city\"},\"customer_id\":1,\"start\":{\"station_id\":1,\"ts\":\"2026-03-23T06:42:00Z\"},\"end\":{\"station_id\":2,\"ts\":\"2026-03-23T07:00:00Z\"},\"distance_km\":3.2,\"price_chf\":2.5,\"payment\":\"card\",\"tags\":[\"commute\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":2,\"bike\":{\"id\":6,\"type\":\"e-bike\"},\"customer_id\":2,\"start\":{\"station_id\":3,\"ts\":\"2026-03-23T07:05:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-23T07:29:00Z\"},\"distance_km\":6.1,\"price_chf\":4.5,\"payment\":\"twint\",\"tags\":[\"commute\"],\"app\":{\"os\":\"Android\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":3,\"bike\":{\"id\":2,\"type\":\"city\"},\"customer_id\":3,\"start\":{\"station_id\":2,\"ts\":\"2026-03-23T11:30:00Z\"},\"end\":{\"station_id\":5,\"ts\":\"2026-03-23T12:11:00Z\"},\"distance_km\":5.4,\"price_chf\":4.0,\"payment\":\"card\",\"tags\":[\"leisure\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.3.0\"}}"
+    ],
+    [
+     "{\"rental_id\":4,\"bike\":{\"id\":10,\"type\":\"cargo\"},\"customer_id\":5,\"start\":{\"station_id\":4,\"ts\":\"2026-03-23T13:15:00Z\"},\"end\":{\"station_id\":4,\"ts\":\"2026-03-23T14:50:00Z\"},\"distance_km\":7.8,\"price_chf\":18.0,\"payment\":\"twint\",\"tags\":[\"shopping\",\"kids\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":5,\"bike\":{\"id\":7,\"type\":\"e-bike\"},\"customer_id\":4,\"start\":{\"station_id\":1,\"ts\":\"2026-03-24T06:50:00Z\"},\"end\":{\"station_id\":3,\"ts\":\"2026-03-24T07:17:00Z\"},\"distance_km\":6.4,\"price_chf\":4.5,\"payment\":\"card\",\"tags\":[\"commute\"],\"app\":{\"os\":\"Android\",\"version\":\"2.4.0\"}}"
+    ],
+    [
+     "{\"rental_id\":6,\"bike\":{\"id\":3,\"type\":\"city\"},\"customer_id\":1,\"start\":{\"station_id\":1,\"ts\":\"2026-03-24T06:44:00Z\"},\"end\":{\"station_id\":2,\"ts\":\"2026-03-24T07:00:00Z\"},\"distance_km\":3.1,\"price_chf\":2.5,\"payment\":\"card\",\"tags\":[\"commute\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":7,\"bike\":{\"id\":8,\"type\":\"e-bike\"},\"customer_id\":6,\"start\":{\"station_id\":5,\"ts\":\"2026-03-24T16:20:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-24T16:42:00Z\"},\"distance_km\":4.0,\"price_chf\":4.5,\"payment\":\"twint\",\"tags\":[\"commute\",\"rain\"],\"app\":{\"os\":\"Android\",\"version\":\"2.2.5\"}}"
+    ],
+    [
+     "{\"rental_id\":8,\"bike\":{\"id\":1,\"type\":\"city\"},\"customer_id\":7,\"start\":{\"station_id\":2,\"ts\":\"2026-03-24T18:05:00Z\"},\"end\":{\"station_id\":2,\"ts\":\"2026-03-24T19:08:00Z\"},\"distance_km\":9.5,\"price_chf\":5.5,\"payment\":\"card\",\"tags\":[\"leisure\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":9,\"bike\":{\"id\":6,\"type\":\"e-bike\"},\"customer_id\":2,\"start\":{\"station_id\":3,\"ts\":\"2026-03-25T07:02:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-25T07:27:00Z\"},\"distance_km\":6.0,\"price_chf\":4.5,\"payment\":\"twint\",\"tags\":[\"commute\"],\"app\":{\"os\":\"Android\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":10,\"bike\":{\"id\":4,\"type\":\"city\"},\"customer_id\":8,\"start\":{\"station_id\":4,\"ts\":\"2026-03-25T07:30:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-25T08:03:00Z\"},\"distance_km\":7.2,\"price_chf\":4.0,\"payment\":\"invoice\",\"tags\":[\"commute\"],\"app\":{\"os\":\"web\",\"version\":null}}"
+    ],
+    [
+     "{\"rental_id\":11,\"bike\":{\"id\":11,\"type\":\"cargo\"},\"customer_id\":5,\"start\":{\"station_id\":4,\"ts\":\"2026-03-25T09:10:00Z\"},\"end\":{\"station_id\":5,\"ts\":\"2026-03-25T11:10:00Z\"},\"distance_km\":11.3,\"price_chf\":18.0,\"payment\":\"twint\",\"tags\":[\"shopping\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":12,\"bike\":{\"id\":2,\"type\":\"city\"},\"customer_id\":9,\"start\":{\"station_id\":1,\"ts\":\"2026-03-25T17:45:00Z\"},\"end\":{\"station_id\":3,\"ts\":\"2026-03-25T18:14:00Z\"},\"distance_km\":6.6,\"price_chf\":2.5,\"payment\":\"card\",\"tags\":[\"commute\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":13,\"bike\":{\"id\":9,\"type\":\"e-bike\"},\"customer_id\":3,\"start\":{\"station_id\":5,\"ts\":\"2026-03-26T12:10:00Z\"},\"end\":{\"station_id\":2,\"ts\":\"2026-03-26T12:24:00Z\"},\"distance_km\":2.2,\"price_chf\":4.5,\"payment\":\"card\",\"tags\":[],\"app\":{\"os\":\"iOS\",\"version\":\"2.3.0\"}}"
+    ],
+    [
+     "{\"rental_id\":14,\"bike\":{\"id\":3,\"type\":\"city\"},\"customer_id\":1,\"start\":{\"station_id\":1,\"ts\":\"2026-03-26T06:41:00Z\"},\"end\":{\"station_id\":2,\"ts\":\"2026-03-26T06:58:00Z\"},\"distance_km\":3.2,\"price_chf\":2.5,\"payment\":\"card\",\"tags\":[\"commute\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":15,\"bike\":{\"id\":7,\"type\":\"e-bike\"},\"customer_id\":6,\"start\":{\"station_id\":1,\"ts\":\"2026-03-26T21:15:00Z\"},\"end\":{\"station_id\":5,\"ts\":\"2026-03-26T21:34:00Z\"},\"distance_km\":3.5,\"price_chf\":4.5,\"payment\":\"twint\",\"tags\":[\"night\"],\"app\":{\"os\":\"Android\",\"version\":\"2.2.5\"}}"
+    ],
+    [
+     "{\"rental_id\":16,\"bike\":{\"id\":5,\"type\":\"city\"},\"customer_id\":99,\"start\":{\"station_id\":2,\"ts\":\"2026-03-26T14:00:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-26T14:12:00Z\"},\"distance_km\":1.9,\"price_chf\":2.5,\"payment\":\"card\",\"tags\":[],\"app\":{\"os\":\"Android\",\"version\":\"2.1.0\"}}"
+    ],
+    [
+     "{\"rental_id\":17,\"bike\":{\"id\":8,\"type\":\"e-bike\"},\"customer_id\":2,\"start\":{\"station_id\":3,\"ts\":\"2026-03-27T07:04:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-27T07:30:00Z\"},\"distance_km\":6.1,\"price_chf\":4.5,\"payment\":\"twint\",\"tags\":[\"commute\",\"rain\"],\"app\":{\"os\":\"Android\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":18,\"bike\":{\"id\":1,\"type\":\"city\"},\"customer_id\":4,\"start\":{\"station_id\":1,\"ts\":\"2026-03-27T23:40:00Z\"},\"end\":{\"station_id\":4,\"ts\":\"2026-03-28T00:25:00Z\"},\"distance_km\":8.0,\"price_chf\":4.0,\"payment\":\"card\",\"tags\":[\"night\"],\"app\":{\"os\":\"Android\",\"version\":\"2.4.0\"}}"
+    ],
+    [
+     "{\"rental_id\":19,\"bike\":{\"id\":10,\"type\":\"cargo\"},\"customer_id\":7,\"start\":{\"station_id\":2,\"ts\":\"2026-03-28T10:00:00Z\"},\"end\":{\"station_id\":3,\"ts\":\"2026-03-28T12:30:00Z\"},\"distance_km\":14.2,\"price_chf\":24.5,\"payment\":\"card\",\"tags\":[\"leisure\",\"kids\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":20,\"bike\":{\"id\":6,\"type\":\"e-bike\"},\"customer_id\":8,\"start\":{\"station_id\":4,\"ts\":\"2026-03-28T08:15:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-28T08:46:00Z\"},\"distance_km\":7.0,\"price_chf\":9.0,\"payment\":\"invoice\",\"tags\":[],\"app\":{\"os\":\"web\",\"version\":null}}"
+    ],
+    [
+     "{\"rental_id\":21,\"bike\":{\"id\":2,\"type\":\"city\"},\"customer_id\":1,\"start\":{\"station_id\":1,\"ts\":\"2026-03-28T09:30:00Z\"},\"end\":{\"station_id\":2,\"ts\":\"2026-03-28T09:45:00Z\"},\"distance_km\":3.0,\"price_chf\":0.0,\"payment\":null,\"tags\":[\"promo\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":22,\"bike\":{\"id\":9,\"type\":\"e-bike\"},\"customer_id\":3,\"start\":{\"station_id\":5,\"ts\":\"2026-03-28T15:20:00Z\"},\"end\":{\"station_id\":5,\"ts\":\"2026-03-28T16:48:00Z\"},\"distance_km\":12.4,\"price_chf\":12.5,\"payment\":\"card\",\"tags\":[\"leisure\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.3.0\"}}"
+    ],
+    [
+     "{\"rental_id\":23,\"bike\":{\"id\":4,\"type\":\"city\"},\"customer_id\":6,\"start\":{\"station_id\":1,\"ts\":\"2026-03-29T00:50:00Z\"},\"end\":{\"station_id\":5,\"ts\":\"2026-03-29T01:20:00Z\"},\"distance_km\":4.1,\"price_chf\":3.0,\"payment\":\"twint\",\"tags\":[\"night\"],\"app\":{\"os\":\"Android\",\"version\":\"2.2.5\"}}"
+    ],
+    [
+     "{\"rental_id\":24,\"bike\":{\"id\":3,\"type\":\"city\"},\"customer_id\":9,\"start\":{\"station_id\":3,\"ts\":\"2026-03-29T13:05:00Z\"},\"end\":{\"station_id\":2,\"ts\":\"2026-03-29T13:57:00Z\"},\"distance_km\":8.8,\"price_chf\":5.0,\"payment\":\"card\",\"tags\":[\"leisure\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":25,\"bike\":{\"id\":8,\"type\":\"e-bike\"},\"customer_id\":2,\"start\":{\"station_id\":3,\"ts\":\"2026-03-30T06:03:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-30T06:28:00Z\"},\"distance_km\":6.0,\"price_chf\":5.5,\"payment\":\"twint\",\"tags\":[\"commute\"],\"app\":{\"os\":\"Android\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":26,\"bike\":{\"id\":1,\"type\":\"city\"},\"customer_id\":1,\"start\":{\"station_id\":1,\"ts\":\"2026-03-30T05:42:00Z\"},\"end\":{\"station_id\":2,\"ts\":\"2026-03-30T05:59:00Z\"},\"distance_km\":3.1,\"price_chf\":3.0,\"payment\":\"card\",\"tags\":[\"commute\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":27,\"bike\":{\"id\":5,\"type\":\"city\"},\"customer_id\":5,\"start\":{\"station_id\":4,\"ts\":\"2026-03-30T12:30:00Z\"},\"end\":{\"station_id\":4,\"ts\":\"2026-03-30T12:50:00Z\"},\"distance_km\":2.7,\"price_chf\":3.0,\"payment\":\"twint\",\"tags\":[\"shopping\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":28,\"bike\":{\"id\":6,\"type\":\"e-bike\"},\"customer_id\":8,\"start\":{\"station_id\":4,\"ts\":\"2026-03-31T06:15:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-31T06:45:00Z\"},\"distance_km\":7.1,\"price_chf\":5.5,\"payment\":\"invoice\",\"tags\":[\"commute\"],\"app\":{\"os\":\"web\",\"version\":null}}"
+    ],
+    [
+     "{\"rental_id\":29,\"bike\":{\"id\":9,\"type\":\"e-bike\"},\"customer_id\":7,\"start\":{\"station_id\":2,\"ts\":\"2026-03-31T16:40:00Z\"},\"end\":{\"station_id\":1,\"ts\":\"2026-03-31T17:16:00Z\"},\"distance_km\":5.9,\"price_chf\":9.0,\"payment\":\"card\",\"tags\":[\"commute\",\"rain\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.4.1\"}}"
+    ],
+    [
+     "{\"rental_id\":30,\"bike\":{\"id\":2,\"type\":\"city\"},\"customer_id\":3,\"start\":{\"station_id\":5,\"ts\":\"2026-03-31T17:55:00Z\"},\"end\":null,\"distance_km\":null,\"price_chf\":null,\"payment\":null,\"tags\":[\"leisure\"],\"app\":{\"os\":\"iOS\",\"version\":\"2.3.0\"}}"
+    ]
+   ]
+  }
+ ]
+}

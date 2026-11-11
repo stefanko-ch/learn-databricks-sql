@@ -1,0 +1,100 @@
+{
+ "file": "03_check.sql",
+ "ran_on": "2026-11-11",
+ "statements": [
+  {
+   "sql": "SELECT 'bikes' AS table_name, count(*) AS row_count FROM bikes\nUNION ALL\nSELECT 'customers', count(*) FROM customers\nUNION ALL\nSELECT 'price_changes', count(*) FROM price_changes\nUNION ALL\nSELECT 'rentals', count(*) FROM rentals\nUNION ALL\nSELECT 'rentals_raw', count(*) FROM rentals_raw\nUNION ALL\nSELECT 'stations', count(*) FROM stations\nORDER BY table_name",
+   "columns": [
+    {
+     "name": "table_name",
+     "type": "string"
+    },
+    {
+     "name": "row_count",
+     "type": "bigint"
+    }
+   ],
+   "rows": [
+    [
+     "bikes",
+     12
+    ],
+    [
+     "customers",
+     10
+    ],
+    [
+     "price_changes",
+     6
+    ],
+    [
+     "rentals",
+     30
+    ],
+    [
+     "rentals_raw",
+     30
+    ],
+    [
+     "stations",
+     6
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT current_timezone() AS session_time_zone",
+   "columns": [
+    {
+     "name": "session_time_zone",
+     "type": "string"
+    }
+   ],
+   "rows": [
+    [
+     "Etc/UTC"
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT\n  rental_id,\n  started_at,\n  ended_at,\n  from_utc_timestamp(started_at, 'Europe/Zurich') AS started_local,\n  from_utc_timestamp(ended_at, 'Europe/Zurich') AS ended_local\nFROM rentals\nWHERE rental_id IN (18, 23)\nORDER BY rental_id",
+   "columns": [
+    {
+     "name": "rental_id",
+     "type": "int"
+    },
+    {
+     "name": "started_at",
+     "type": "timestamp"
+    },
+    {
+     "name": "ended_at",
+     "type": "timestamp"
+    },
+    {
+     "name": "started_local",
+     "type": "timestamp"
+    },
+    {
+     "name": "ended_local",
+     "type": "timestamp"
+    }
+   ],
+   "rows": [
+    [
+     18,
+     "2026-03-27 23:40:00",
+     "2026-03-28 00:25:00",
+     "2026-03-28 00:40:00",
+     "2026-03-28 01:25:00"
+    ],
+    [
+     23,
+     "2026-03-29 00:50:00",
+     "2026-03-29 01:20:00",
+     "2026-03-29 01:50:00",
+     "2026-03-29 03:20:00"
+    ]
+   ]
+  }
+ ]
+}

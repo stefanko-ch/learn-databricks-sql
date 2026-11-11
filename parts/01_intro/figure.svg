@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 700" width="1050" height="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+<rect width="1050" height="700" fill="#ffffff"/>
+<text x="30" y="52" font-size="22" font-weight="700" fill="#1b1f23">velo</text>
+<text x="30" y="78" font-size="14" fill="#8a939c">a fictional bike rental in Lucerne: six tables, 6 to 30 rows each</text>
+<path d="M365,176.0 H318 V322.0 H270" fill="none" stroke="#2f6fab" stroke-width="1.6"/>
+<path d="M605,200.0 H652 V152.0 H700" fill="none" stroke="#2f6fab" stroke-width="1.6"/>
+<path d="M270,442.0 H318 V502.0 H365" fill="none" stroke="#2f6fab" stroke-width="1.6"/>
+<path d="M400,380 V460" fill="none" stroke="#2f6fab" stroke-width="1.6"/>
+<text x="412" y="424.0" font-size="11" fill="#2f6fab">start_station_id</text>
+<path d="M530,380 V460" fill="none" stroke="#2f6fab" stroke-width="1.6"/>
+<text x="542" y="424.0" font-size="11" fill="#2f6fab">end_station_id</text>
+<path d="M30,370.0 H12 V152.0 H30" fill="none" stroke="#8a939c" stroke-width="1.6" stroke-dasharray="5 4"/>
+<path d="M700,368.0 H605" fill="none" stroke="#8a939c" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="615" y="359" font-size="11" fill="#8a939c">same rentals</text>
+<rect x="365" y="460" width="240" height="198" fill="#ffffff" stroke="#d9dee3"/>
+<rect x="365" y="460" width="240" height="30" fill="#eef1f4" stroke="#d9dee3"/>
+<text x="377" y="480" font-weight="700" fill="#1b1f23">stations</text>
+<text x="593" y="480" font-size="11" text-anchor="end" fill="#8a939c">6 rows</text>
+<text x="377" y="506" font-size="10" font-weight="700" fill="#1b1f23">PK</text>
+<text x="403" y="507" fill="#1b1f23" font-weight="700">station_id</text>
+<text x="593" y="507" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="403" y="531" fill="#1b1f23">name</text>
+<text x="593" y="531" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<text x="403" y="555" fill="#1b1f23">postal_code</text>
+<text x="593" y="555" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="403" y="579" fill="#1b1f23">latitude</text>
+<text x="593" y="579" font-size="11" text-anchor="end" fill="#8a939c">double</text>
+<text x="403" y="603" fill="#1b1f23">longitude</text>
+<text x="593" y="603" font-size="11" text-anchor="end" fill="#8a939c">double</text>
+<text x="403" y="627" fill="#1b1f23">capacity</text>
+<text x="593" y="627" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="403" y="651" fill="#1b1f23">opened_on</text>
+<text x="593" y="651" font-size="11" text-anchor="end" fill="#8a939c">date</text>
+<rect x="30" y="280" width="240" height="198" fill="#ffffff" stroke="#d9dee3"/>
+<rect x="30" y="280" width="240" height="30" fill="#eef1f4" stroke="#d9dee3"/>
+<text x="42" y="300" font-weight="700" fill="#1b1f23">bikes</text>
+<text x="258" y="300" font-size="11" text-anchor="end" fill="#8a939c">12 rows</text>
+<text x="42" y="326" font-size="10" font-weight="700" fill="#1b1f23">PK</text>
+<text x="68" y="327" fill="#1b1f23" font-weight="700">bike_id</text>
+<text x="258" y="327" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="68" y="351" fill="#1b1f23">model</text>
+<text x="258" y="351" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<text x="68" y="375" fill="#1b1f23">bike_type</text>
+<text x="258" y="375" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<text x="68" y="399" fill="#1b1f23">purchased_on</text>
+<text x="258" y="399" font-size="11" text-anchor="end" fill="#8a939c">date</text>
+<text x="68" y="423" fill="#1b1f23">purchase_price</text>
+<text x="258" y="423" font-size="11" text-anchor="end" fill="#8a939c">decimal</text>
+<text x="42" y="446" font-size="10" font-weight="700" fill="#2f6fab">FK</text>
+<text x="68" y="447" fill="#1b1f23">home_station_id</text>
+<text x="258" y="447" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="68" y="471" fill="#1b1f23">status</text>
+<text x="258" y="471" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<rect x="700" y="110" width="240" height="198" fill="#ffffff" stroke="#d9dee3"/>
+<rect x="700" y="110" width="240" height="30" fill="#eef1f4" stroke="#d9dee3"/>
+<text x="712" y="130" font-weight="700" fill="#1b1f23">customers</text>
+<text x="928" y="130" font-size="11" text-anchor="end" fill="#8a939c">10 rows</text>
+<text x="712" y="156" font-size="10" font-weight="700" fill="#1b1f23">PK</text>
+<text x="738" y="157" fill="#1b1f23" font-weight="700">customer_id</text>
+<text x="928" y="157" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="738" y="181" fill="#1b1f23">first_name</text>
+<text x="928" y="181" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<text x="738" y="205" fill="#1b1f23">last_name</text>
+<text x="928" y="205" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<text x="738" y="229" fill="#1b1f23">email</text>
+<text x="928" y="229" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<text x="738" y="253" fill="#1b1f23">city</text>
+<text x="928" y="253" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<text x="738" y="277" fill="#1b1f23">signed_up_on</text>
+<text x="928" y="277" font-size="11" text-anchor="end" fill="#8a939c">date</text>
+<text x="738" y="301" fill="#1b1f23">plan</text>
+<text x="928" y="301" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<rect x="30" y="110" width="240" height="126" fill="#ffffff" stroke="#d9dee3"/>
+<rect x="30" y="110" width="240" height="30" fill="#eef1f4" stroke="#d9dee3"/>
+<text x="42" y="130" font-weight="700" fill="#1b1f23">price_changes</text>
+<text x="258" y="130" font-size="11" text-anchor="end" fill="#8a939c">6 rows</text>
+<text x="42" y="156" font-size="10" font-weight="700" fill="#1b1f23">PK</text>
+<text x="68" y="157" fill="#1b1f23" font-weight="700">bike_type</text>
+<text x="258" y="157" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<text x="42" y="180" font-size="10" font-weight="700" fill="#1b1f23">PK</text>
+<text x="68" y="181" fill="#1b1f23" font-weight="700">valid_from</text>
+<text x="258" y="181" font-size="11" text-anchor="end" fill="#8a939c">date</text>
+<text x="68" y="205" fill="#1b1f23">unlock_fee</text>
+<text x="258" y="205" font-size="11" text-anchor="end" fill="#8a939c">decimal</text>
+<text x="68" y="229" fill="#1b1f23">price_per_30_min</text>
+<text x="258" y="229" font-size="11" text-anchor="end" fill="#8a939c">decimal</text>
+<rect x="365" y="110" width="240" height="270" fill="#ffffff" stroke="#d9dee3"/>
+<rect x="365" y="110" width="240" height="30" fill="#eef1f4" stroke="#d9dee3"/>
+<text x="377" y="130" font-weight="700" fill="#1b1f23">rentals</text>
+<text x="593" y="130" font-size="11" text-anchor="end" fill="#8a939c">30 rows</text>
+<text x="377" y="156" font-size="10" font-weight="700" fill="#1b1f23">PK</text>
+<text x="403" y="157" fill="#1b1f23" font-weight="700">rental_id</text>
+<text x="593" y="157" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="377" y="180" font-size="10" font-weight="700" fill="#2f6fab">FK</text>
+<text x="403" y="181" fill="#1b1f23">bike_id</text>
+<text x="593" y="181" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="377" y="204" font-size="10" font-weight="700" fill="#2f6fab">FK</text>
+<text x="403" y="205" fill="#1b1f23">customer_id</text>
+<text x="593" y="205" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="377" y="228" font-size="10" font-weight="700" fill="#2f6fab">FK</text>
+<text x="403" y="229" fill="#1b1f23">start_station_id</text>
+<text x="593" y="229" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="377" y="252" font-size="10" font-weight="700" fill="#2f6fab">FK</text>
+<text x="403" y="253" fill="#1b1f23">end_station_id</text>
+<text x="593" y="253" font-size="11" text-anchor="end" fill="#8a939c">int</text>
+<text x="403" y="277" fill="#1b1f23">started_at</text>
+<text x="593" y="277" font-size="11" text-anchor="end" fill="#8a939c">timestamp</text>
+<text x="403" y="301" fill="#1b1f23">ended_at</text>
+<text x="593" y="301" font-size="11" text-anchor="end" fill="#8a939c">timestamp</text>
+<text x="403" y="325" fill="#1b1f23">distance_km</text>
+<text x="593" y="325" font-size="11" text-anchor="end" fill="#8a939c">decimal</text>
+<text x="403" y="349" fill="#1b1f23">price_chf</text>
+<text x="593" y="349" font-size="11" text-anchor="end" fill="#8a939c">decimal</text>
+<text x="403" y="373" fill="#1b1f23">payment_method</text>
+<text x="593" y="373" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<rect x="700" y="353" width="240" height="54" fill="#ffffff" stroke="#d9dee3"/>
+<rect x="700" y="353" width="240" height="30" fill="#eef1f4" stroke="#d9dee3"/>
+<text x="712" y="373" font-weight="700" fill="#1b1f23">rentals_raw</text>
+<text x="928" y="373" font-size="11" text-anchor="end" fill="#8a939c">30 rows</text>
+<text x="738" y="400" fill="#1b1f23">raw</text>
+<text x="928" y="400" font-size="11" text-anchor="end" fill="#8a939c">string</text>
+<line x1="352.0" y1="176.0" x2="365.0" y2="183.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="352.0" y1="176.0" x2="365.0" y2="169.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="347.0" cy="176.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="277.0" y1="315.0" x2="277.0" y2="329.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="283.0" y1="315.0" x2="283.0" y2="329.0" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="618.0" y1="200.0" x2="605.0" y2="193.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="618.0" y1="200.0" x2="605.0" y2="207.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="623.0" cy="200.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="693.0" y1="159.0" x2="693.0" y2="145.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="687.0" y1="159.0" x2="687.0" y2="145.0" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="283.0" y1="442.0" x2="270.0" y2="435.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="283.0" y1="442.0" x2="270.0" y2="449.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="288.0" cy="442.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="358.0" y1="509.0" x2="358.0" y2="495.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="348.0" cy="502.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="400.0" y1="393.0" x2="407.0" y2="380.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="400.0" y1="393.0" x2="393.0" y2="380.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="400.0" cy="398.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="393.0" y1="453.0" x2="407.0" y2="453.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="393.0" y1="447.0" x2="407.0" y2="447.0" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="530.0" y1="393.0" x2="537.0" y2="380.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="530.0" y1="393.0" x2="523.0" y2="380.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="530.0" cy="398.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="523.0" y1="453.0" x2="537.0" y2="453.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="530.0" cy="443.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<text x="30" y="520" font-size="12" font-weight="700" fill="#1b1f23">how to read the lines</text>
+<line x1="30" y1="546" x2="74" y2="546" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="67.0" y1="553.0" x2="67.0" y2="539.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="61.0" y1="553.0" x2="61.0" y2="539.0" stroke="#2f6fab" stroke-width="1.6"/>
+<text x="88" y="550" font-size="12" fill="#1b1f23">exactly one</text>
+<line x1="30" y1="572" x2="74" y2="572" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="67.0" y1="579.0" x2="67.0" y2="565.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="57.0" cy="572.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<text x="88" y="576" font-size="12" fill="#1b1f23">zero or one</text>
+<line x1="30" y1="598" x2="74" y2="598" stroke="#2f6fab" stroke-width="1.6"/>
+<line x1="61.0" y1="598.0" x2="74.0" y2="605.0" stroke="#2f6fab" stroke-width="1.6"/><line x1="61.0" y1="598.0" x2="74.0" y2="591.0" stroke="#2f6fab" stroke-width="1.6"/><circle cx="56.0" cy="598.0" r="4.5" fill="#ffffff" stroke="#2f6fab" stroke-width="1.6"/>
+<text x="88" y="602" font-size="12" fill="#1b1f23">zero or many</text>
+<line x1="30" y1="624" x2="74" y2="624" stroke="#8a939c" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="88" y="628" font-size="12" fill="#1b1f23">same values, no key</text>
+<text x="30" y="658" font-size="11" fill="#8a939c">PK and FK are the intended keys.</text>
+<text x="30" y="674" font-size="11" fill="#8a939c">The tables declare no constraints.</text>
+<rect x="700" y="470" width="300" height="174" fill="#fde8d8"/>
+<text x="712" y="493" font-weight="700" fill="#b4571c">on purpose</text>
+<text x="712" y="517" font-size="13" fill="#b4571c">station 6: not open yet</text>
+<text x="712" y="540" font-size="13" fill="#b4571c">bike 12: never rented</text>
+<text x="712" y="563" font-size="13" fill="#b4571c">customer 10: no rentals</text>
+<text x="712" y="586" font-size="13" fill="#b4571c">customers 4 and 9: the same person</text>
+<text x="712" y="609" font-size="13" fill="#b4571c">rental 16: customer 99 is missing</text>
+<text x="712" y="632" font-size="13" fill="#b4571c">rental 30: still running</text>
+</svg>

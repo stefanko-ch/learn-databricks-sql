@@ -1,0 +1,172 @@
+{
+ "file": "01_opening.sql",
+ "ran_on": "2026-11-11",
+ "statements": [
+  {
+   "sql": "SELECT\n  customer_id,\n  rental_id,\n  started_at,\n  price_chf\nFROM rentals\nQUALIFY row_number() OVER (PARTITION BY customer_id ORDER BY started_at DESC) = 1\nORDER BY customer_id",
+   "columns": [
+    {
+     "name": "customer_id",
+     "type": "int"
+    },
+    {
+     "name": "rental_id",
+     "type": "int"
+    },
+    {
+     "name": "started_at",
+     "type": "timestamp"
+    },
+    {
+     "name": "price_chf",
+     "type": "decimal"
+    }
+   ],
+   "rows": [
+    [
+     1,
+     26,
+     "2026-03-30 05:42:00",
+     "3.00"
+    ],
+    [
+     2,
+     25,
+     "2026-03-30 06:03:00",
+     "5.50"
+    ],
+    [
+     3,
+     30,
+     "2026-03-31 17:55:00",
+     null
+    ],
+    [
+     4,
+     18,
+     "2026-03-27 23:40:00",
+     "4.00"
+    ],
+    [
+     5,
+     27,
+     "2026-03-30 12:30:00",
+     "3.00"
+    ],
+    [
+     6,
+     23,
+     "2026-03-29 00:50:00",
+     "3.00"
+    ],
+    [
+     7,
+     29,
+     "2026-03-31 16:40:00",
+     "9.00"
+    ],
+    [
+     8,
+     28,
+     "2026-03-31 06:15:00",
+     "5.50"
+    ],
+    [
+     9,
+     24,
+     "2026-03-29 13:05:00",
+     "5.00"
+    ],
+    [
+     99,
+     16,
+     "2026-03-26 14:00:00",
+     "2.50"
+    ]
+   ]
+  },
+  {
+   "sql": "SELECT\n  customer_id,\n  rental_id,\n  started_at,\n  price_chf\nFROM (\n  SELECT\n    customer_id,\n    rental_id,\n    started_at,\n    price_chf,\n    row_number() OVER (PARTITION BY customer_id ORDER BY started_at DESC) AS rn\n  FROM rentals\n) AS ranked\nWHERE rn = 1\nORDER BY customer_id",
+   "columns": [
+    {
+     "name": "customer_id",
+     "type": "int"
+    },
+    {
+     "name": "rental_id",
+     "type": "int"
+    },
+    {
+     "name": "started_at",
+     "type": "timestamp"
+    },
+    {
+     "name": "price_chf",
+     "type": "decimal"
+    }
+   ],
+   "rows": [
+    [
+     1,
+     26,
+     "2026-03-30 05:42:00",
+     "3.00"
+    ],
+    [
+     2,
+     25,
+     "2026-03-30 06:03:00",
+     "5.50"
+    ],
+    [
+     3,
+     30,
+     "2026-03-31 17:55:00",
+     null
+    ],
+    [
+     4,
+     18,
+     "2026-03-27 23:40:00",
+     "4.00"
+    ],
+    [
+     5,
+     27,
+     "2026-03-30 12:30:00",
+     "3.00"
+    ],
+    [
+     6,
+     23,
+     "2026-03-29 00:50:00",
+     "3.00"
+    ],
+    [
+     7,
+     29,
+     "2026-03-31 16:40:00",
+     "9.00"
+    ],
+    [
+     8,
+     28,
+     "2026-03-31 06:15:00",
+     "5.50"
+    ],
+    [
+     9,
+     24,
+     "2026-03-29 13:05:00",
+     "5.00"
+    ],
+    [
+     99,
+     16,
+     "2026-03-26 14:00:00",
+     "2.50"
+    ]
+   ]
+  }
+ ]
+}
