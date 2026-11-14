@@ -1,0 +1,15 @@
+{
+  "name": "learn-databricks-sql: run a SQL file",
+  "tasks": [
+    {
+      "task_key": "run_script",
+      "sql_task": {
+        "warehouse_id": "<warehouse-id>",
+        "file": {
+          "path": "/Workspace/Users/<you>/learn-databricks-sql/parts/02_where_to_run/01_script.sql",
+          "source": "WORKSPACE"
+        }
+      }
+    }
+  ]
+}

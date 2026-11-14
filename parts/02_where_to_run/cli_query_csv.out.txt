@@ -1,0 +1,4 @@
+bike_type,bikes
+cargo,2
+city,5
+e-bike,5

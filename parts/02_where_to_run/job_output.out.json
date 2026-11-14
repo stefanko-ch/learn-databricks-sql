@@ -1,0 +1,51 @@
+{
+  "sql_output": {
+    "file_output": {
+      "query_result": {
+        "columns": [
+          {
+            "name": "bike_type"
+          },
+          {
+            "name": "bikes"
+          }
+        ],
+        "rows": [
+          {
+            "values": [
+              {
+                "string_value": "cargo"
+              },
+              {
+                "string_value": "2"
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "string_value": "city"
+              },
+              {
+                "string_value": "5"
+              }
+            ]
+          },
+          {
+            "values": [
+              {
+                "string_value": "e-bike"
+              },
+              {
+                "string_value": "5"
+              }
+            ]
+          }
+        ],
+        "truncated": false
+      },
+      "query_text": "-- The script every way of running SQL gets in this part: two statements, the second depends on the first.\nUSE sql_playground.velo;\n\nSELECT\n  bike_type,\n  count(*) AS bikes\nFROM bikes\nGROUP BY bike_type\nORDER BY bike_type;\n",
+      "warehouse_id": "<warehouse-id>"
+    }
+  }
+}

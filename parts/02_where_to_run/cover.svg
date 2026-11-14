@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 819" width="1560" height="819">
+<rect width="1560" height="819" fill="#f7f8fa"/>
+<rect x="96" y="112" width="383" height="320" rx="10" fill="#ffffff" stroke="#d9dee3" stroke-width="1.5"/>
+<text x="122" y="156" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="23" fill="#1b1f23" xml:space="preserve"><tspan fill="#2f6fab" font-weight="700">USE</tspan> sql_playground.velo;</text>
+<text x="122" y="191" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="23" fill="#1b1f23" xml:space="preserve"></text>
+<text x="122" y="225" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="23" fill="#1b1f23" xml:space="preserve"><tspan fill="#2f6fab" font-weight="700">SELECT</tspan></text>
+<text x="122" y="260" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="23" fill="#1b1f23" xml:space="preserve">  bike_type,</text>
+<text x="122" y="294" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="23" fill="#1b1f23" xml:space="preserve">  count(*) <tspan fill="#2f6fab" font-weight="700">AS</tspan> bikes</text>
+<text x="122" y="329" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="23" fill="#1b1f23" xml:space="preserve"><tspan fill="#2f6fab" font-weight="700">FROM</tspan> bikes</text>
+<text x="122" y="363" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="23" fill="#1b1f23" xml:space="preserve"><tspan fill="#2f6fab" font-weight="700">GROUP</tspan> <tspan fill="#2f6fab" font-weight="700">BY</tspan> bike_type</text>
+<text x="122" y="398" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="23" fill="#1b1f23" xml:space="preserve"><tspan fill="#2f6fab" font-weight="700">ORDER</tspan> <tspan fill="#2f6fab" font-weight="700">BY</tspan> bike_type;</text>
+<g transform="translate(837 112) scale(1.300)">
+<rect x="0" y="0" width="254" height="202" fill="#ffffff" stroke="#d9dee3" stroke-width="1.5"/>
+<rect x="0" y="0" width="254" height="58" fill="#eef1f4"/>
+<text x="13" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="700" fill="#1b1f23">bike_type</text>
+<text x="13" y="89" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" fill="#1b1f23">cargo</text>
+<text x="13" y="137" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" fill="#1b1f23">city</text>
+<text x="13" y="185" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" fill="#1b1f23">e-bike</text>
+<text x="169" y="38" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="700" fill="#1b1f23">bikes</text>
+<text x="169" y="89" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" fill="#1b1f23">2</text>
+<text x="169" y="137" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" fill="#1b1f23">5</text>
+<text x="169" y="185" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" fill="#1b1f23">5</text>
+<line x1="0" x2="254" y1="58" y2="58" stroke="#d9dee3"/>
+<line x1="0" x2="254" y1="106" y2="106" stroke="#d9dee3"/>
+<line x1="0" x2="254" y1="154" y2="154" stroke="#d9dee3"/>
+<line x1="0" x2="254" y1="202" y2="202" stroke="#d9dee3"/>
+</g>
+</svg>

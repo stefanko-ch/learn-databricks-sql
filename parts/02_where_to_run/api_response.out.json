@@ -1,0 +1,55 @@
+{
+  "statement_id": "01f1e017-989b-1c9c-923c-3c8e3bc23402",
+  "status": {
+    "state": "SUCCEEDED"
+  },
+  "manifest": {
+    "format": "JSON_ARRAY",
+    "schema": {
+      "column_count": 2,
+      "columns": [
+        {
+          "name": "bike_type",
+          "type_text": "STRING",
+          "type_name": "STRING",
+          "position": 0
+        },
+        {
+          "name": "bikes",
+          "type_text": "BIGINT",
+          "type_name": "LONG",
+          "position": 1
+        }
+      ]
+    },
+    "total_chunk_count": 1,
+    "chunks": [
+      {
+        "chunk_index": 0,
+        "row_offset": 0,
+        "row_count": 3
+      }
+    ],
+    "total_row_count": 3,
+    "truncated": false
+  },
+  "result": {
+    "chunk_index": 0,
+    "row_offset": 0,
+    "row_count": 3,
+    "data_array": [
+      [
+        "cargo",
+        "2"
+      ],
+      [
+        "city",
+        "5"
+      ],
+      [
+        "e-bike",
+        "5"
+      ]
+    ]
+  }
+}

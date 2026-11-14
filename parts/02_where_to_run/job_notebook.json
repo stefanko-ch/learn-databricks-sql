@@ -1,0 +1,12 @@
+{
+  "name": "learn-databricks-sql: run a SQL notebook",
+  "tasks": [
+    {
+      "task_key": "run_notebook",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/<you>/learn-databricks-sql/parts/02_where_to_run/02_notebook",
+        "warehouse_id": "<warehouse-id>"
+      }
+    }
+  ]
+}

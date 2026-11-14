@@ -1,0 +1,13 @@
+Error: query failed: BAD_REQUEST 
+[PARSE_SYNTAX_ERROR] Syntax error at or near 'SELECT': extra input 'SELECT'. SQLSTATE: 42601 (line 2, pos 0)
+
+== SQL ==
+USE sql_playground.velo;
+SELECT
+^^^
+bike_type,
+count(*) AS bikes
+FROM bikes
+GROUP BY bike_type
+ORDER BY bike_type;
+

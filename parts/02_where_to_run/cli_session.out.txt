@@ -1,0 +1,6 @@
+[
+  {
+    "catalog": "workspace",
+    "schema": "default"
+  }
+]

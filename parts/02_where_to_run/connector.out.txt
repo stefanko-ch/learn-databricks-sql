@@ -1,0 +1,5 @@
+['bike_type', 'bikes']
+Row(bike_type='cargo', bikes=2)
+Row(bike_type='city', bikes=5)
+Row(bike_type='e-bike', bikes=5)
+ServerOperationError [PARSE_SYNTAX_ERROR] Syntax error at or near 'SELECT': extra input 'SELECT'. SQLSTATE: 42601 (line 1, pos 17)

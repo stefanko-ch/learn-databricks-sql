@@ -1,0 +1,7 @@
+{
+  "warehouse_id": "<warehouse-id>",
+  "catalog": "sql_playground",
+  "schema": "velo",
+  "statement": "SELECT bike_type, count(*) AS bikes FROM bikes GROUP BY bike_type ORDER BY bike_type",
+  "wait_timeout": "30s"
+}

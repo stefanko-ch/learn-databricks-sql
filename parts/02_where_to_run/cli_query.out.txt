@@ -1,0 +1,14 @@
+[
+  {
+    "bike_type": "cargo",
+    "bikes": "2"
+  },
+  {
+    "bike_type": "city",
+    "bikes": "5"
+  },
+  {
+    "bike_type": "e-bike",
+    "bikes": "5"
+  }
+]

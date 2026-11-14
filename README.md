@@ -42,6 +42,7 @@ Part 1 of the series shows every table and its odd rows.
 | Part | Article | Code |
 |---|---|---|
 | 1 | [Why, and the data we'll use](https://stefanko-ch.medium.com/learn-databricks-sql-part-1-why-and-the-data-well-use-a0c5480da50c) | [`parts/01_intro/`](parts/01_intro/) |
+| 2 | Where and how to run it | [`parts/02_where_to_run/`](parts/02_where_to_run/) |
 
 ## Exercises
 

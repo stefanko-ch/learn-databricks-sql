@@ -1,0 +1,11 @@
+{
+  "statement_id": "01f1e017-9944-126a-8faf-271ac6d33323",
+  "status": {
+    "state": "FAILED",
+    "error": {
+      "error_code": "BAD_REQUEST",
+      "message": "\n[PARSE_SYNTAX_ERROR] Syntax error at or near 'SELECT': extra input 'SELECT'. SQLSTATE: 42601 (line 1, pos 25)\n\n== SQL ==\nUSE sql_playground.velo; SELECT count(*) AS bikes FROM bikes\n-------------------------^^^\n"
+    },
+    "sql_state": "42601"
+  }
+}

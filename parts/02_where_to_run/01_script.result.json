@@ -1,0 +1,43 @@
+{
+ "file": "01_script.sql",
+ "ran_on": "2026-11-11",
+ "statements": [
+  {
+   "sql": "USE sql_playground.velo",
+   "columns": [
+    {
+     "name": "Result",
+     "type": "string"
+    }
+   ],
+   "rows": []
+  },
+  {
+   "sql": "SELECT\n  bike_type,\n  count(*) AS bikes\nFROM bikes\nGROUP BY bike_type\nORDER BY bike_type",
+   "columns": [
+    {
+     "name": "bike_type",
+     "type": "string"
+    },
+    {
+     "name": "bikes",
+     "type": "bigint"
+    }
+   ],
+   "rows": [
+    [
+     "cargo",
+     2
+    ],
+    [
+     "city",
+     5
+    ],
+    [
+     "e-bike",
+     5
+    ]
+   ]
+  }
+ ]
+}
